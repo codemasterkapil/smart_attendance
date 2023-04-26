@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+  <body style="background-image: url('./static/images/background1.gif')"></body>);">
+    <div class="container">
+        <div style="text-align: center;" class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h1 style="margin: 20px; text-align: center;" class="mt-5">Live Streaming</h1>
+                <img style="height: 600px;" src="{{ url_for('video_feed') }}" width="100%">
+                <button style="margin: 20px;" class="btn btn-primary" type="button" onclick="window.location.href='{{ url_for( 'marked') }}';">Mark Attendance</button>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+
+
+</html>

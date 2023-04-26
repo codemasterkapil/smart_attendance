@@ -1,0 +1,1 @@
+alert("Congratulations! You attendance has been marked.");

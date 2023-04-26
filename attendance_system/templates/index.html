@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .centre_div{
+        width:100vw;
+        height: 60vh;
+        background-color: #ffffff;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10;
+    }
+    .wave{
+        width:4rem;
+        height: 20rem;
+        background-color: #a4ff6b;
+        margin: 0;
+        border-radius: 0.4rem;
+        animation:waves 1s linear infinite;
+        -webkit-animation: waves 1s linear infinite;
+        transform-origin: bottom;
+    }
+    @keyframes waves{
+        0%{
+            transform:scale(0);
+        }
+        50%{
+            transform:scale(1);
+        }
+        100%{
+            transform:scale(0);
+        }
+    }
+    
+    .wave:nth-child(2){
+        animation-delay: 0.1s;
+    }
+    .wave:nth-child(3){
+        animation-delay: 0.2s;
+    }
+    .wave:nth-child(4){
+        animation-delay: 0.3s;
+    }
+    .wave:nth-child(5){
+        animation-delay: 0.4s;
+    }
+    .wave:nth-child(6){
+        animation-delay: 0.5s;
+    }
+    .wave:nth-child(7){
+        animation-delay: 0.6s;
+    }
+    .wave:nth-child(8){
+        animation-delay: 0.7s;
+    }
+    .wave:nth-child(9){
+        animation-delay: 0.8s;
+    }
+    .wave:nth-child(10){
+        animation-delay: 0.9s;
+    }
+    .centre1_div{
+            width: 20vw;
+            height: 20vh;
+            background-color: #2f3542;
+            display:grid;
+            place-items: center;
+        }
+        .rider{
+            color: #fff;
+            font-size: 4rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .rider::before{
+            content:"RECOGNISER";
+            width:100%;
+            color: #2ed573;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 0.4rem solid #2ed573;
+            animation: slide 3s linear infinite;
+            -webkit-animation: slide 3s linear infinite;
+            overflow: hidden;
+        }
+         @keyframes slide{
+             0%{
+                 width: 0%;
+             }
+             50%{
+                 width: 100%;
+             }
+             100%{
+                 width: 0%;
+             }
+         }
+
+</style>
+
+  <body>
+    <div class="site-main-wrapper">
+
+        <header id="home">
+            <div style="color: red;" class="container">
+                
+            <!--Hero Section Start-->
+            <div class="hero flex items-centre space-between">
+                <div class="right flex-1">
+                    <h1 style="text-align: center; padding-top: 100px;" >I am a Smart <br> Face <span class="rider">RECOGNISER</span></h1>
+                </div>
+            </div>
+        </div>
+        </header>
+        <!--Hero Section Ends-->
+        <!--About Me Section Starts-->
+        <section class="about" id="about">
+            <div class="container flex items-centre">
+                <div class="right flex-1">
+                    <h1>About <span>Me</span></h1>
+                    <h3>Hey! I will Mark Your Attendance</h3>
+                    <p>I am an automatic sofware in presence of which you need not worry about the traditional methods of marking attendance. You can just initiate the process by clicking on the button <bold>"Take Attendance"</bold></p>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn btn-primary" type="button" onclick="window.location.href='{{ url_for( 'result') }}';">Take Attendance</button>
+                </div>
+            </div>
+        </section>
+        <!--About Me Section Ends-->
+
+        <div class="centre_div">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    
+        <!--uses Section Starts-->
+        <section class="uses" id="uses">
+            <div class="container">
+            <h1 class="section-heading">My <span>Uses</span></h1>
+            <p>These following is my versatality</p>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="{{ url_for('static',filename='images/hospital.jpg')}}">
+                    <h2>In Hospitals</h2>
+                    <p>My Technology can easily replace the traditional ways of marking the participation of the all the Doctors and Nurses so that they directly focus on pateints.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static',filename='images/office.jpg')}}">
+                    <h2>In Offices</h2>
+                    <p>My Technology can easily replace the traditional ways of marking the participation of the Emplyees.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static',filename='images/school.jpg')}}">
+                    <h2>In Schools and Colleges</h2>
+                    <p>My Technology can easily replace the traditional ways of marking the participation of the Students. Because they can easily forget to mark there attendance.</p>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+
+
+        <!--Footer Section Starts-->
+        <footer>
+            <div class="footer-text">
+                Copyright 2022 @ Kapil Kumar Sangwan. All Rights Reserved.
+            </div>
+        </footer>
+        <!--Footer Section Ends-->
+    
+
+    <!--Script tag Starts-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='script/app.js')}}"></script>
+    <!--Script Tag Ends-->
+    </body>
+
+
+</html>

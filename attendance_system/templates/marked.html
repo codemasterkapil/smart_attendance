@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+
+  <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5;
+    }
+    .centre1_div{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0);
+        display:grid;
+        place-items: center;
+        padding-right: 400px;
+    }
+    .rider{
+        color: #fff;
+        font-size: 8rem;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .rider::before{
+        content:"Completed";
+        width:100%;
+        color: #2ed573;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 0.4rem solid #2ed573;
+        animation: slide 3s linear infinite;
+        -webkit-animation: slide 3s linear infinite;
+        overflow: hidden;
+    }
+     @keyframes slide{
+         0%{
+             width: 0%;
+         }
+         50%{
+             width: 100%;
+         }
+         100%{
+             width: 0%;
+         }
+     }
+</style>
+
+  <body style="background-image: url('./static/images/background2.gif')">
+    <div class="container">
+        <div style="text-align: center;" class="row">
+            <div class="col-lg-8  offset-lg-2 centre1_div">
+                <h1 style="margin: 20px; text-align: center;" class="mt-5 rider">Completed</h1>
+                <button style="margin: 20px;" class="btn btn-primary" type="button" onclick="window.location.href='{{ url_for( 'index') }}';">Finish Process</button>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+    <script type="text/javascript" src="{{ url_for('static',filename='script/pop_up.js')}}"></script>
+
+</html>
