@@ -6,22 +6,23 @@ import numpy as np
 from .attendance import take_attendance
 
 camera = cv2.VideoCapture(0)
+
 # Load a sample picture and learn how to recognize it.
 kapil_image = face_recognition.load_image_file("training_Data/Kapil/Kapil.jpeg")
 kapil_face_encoding = face_recognition.face_encodings(kapil_image)[0]
 
 # Load another sample picture and learn how to recognize it.
-Raj_image = face_recognition.load_image_file("training_Data/Raj/Raj.jpeg")
-Raj_face_encoding = face_recognition.face_encodings(Raj_image)[0]
+Rohit_image = face_recognition.load_image_file("training_Data/Rohit/Rohit.jpeg")
+Rohit_face_encoding = face_recognition.face_encodings(Rohit_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     kapil_face_encoding,
-    Raj_face_encoding
+    Rohit_face_encoding
 ]
 known_face_names = [
     "Kapil",
-    "Raj"
+    "Rohit"
 ]
 
 # Initialize some variables
