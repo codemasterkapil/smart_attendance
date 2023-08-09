@@ -1,4 +1,4 @@
-# Smart Attendance System using docker
+# Smart Attendance System 
 
 ![Flowchart](https://user-images.githubusercontent.com/81853910/234709101-91fe7231-fc55-450a-8791-7536340de0f4.png)
 
