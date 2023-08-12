@@ -2,6 +2,11 @@
 
 ![Flowchart](https://user-images.githubusercontent.com/81853910/234709101-91fe7231-fc55-450a-8791-7536340de0f4.png)
 
+# 📄 Documentation
+
+Project was entirely documented through a summary-cum-logbook.
+
+The link for document can be found [here](https://docs.google.com/document/d/1d7mIC_XObldqrMN3rBEGLxJHqO9GOloJhzTvwr5MwOo/edit?usp=sharing).
 
 ## Setup
 
